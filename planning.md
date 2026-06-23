@@ -83,11 +83,11 @@ Below these thresholds, the model is not reliably distinguishing between the lab
 
 ## AI Tool Plan
 
-**Label stress-testing:** Before annotating, I gave Claude my three label definitions and asked it to generate 10 borderline posts that sit between hot_take and analysis. Several of the generated posts were genuinely ambiguous (e.g., a post citing one cherry-picked stat with aggressive framing), which helped me tighten the decision rule: evidence must do real argumentative work, not just decorate an opinion.
+**Label stress-testing:** Before annotating, I will give Claude my label definitions and ask it to generate borderline posts between hot_take and analysis. If the generated posts are hard to classify, I'll use that as a signal to tighten my definitions before committing to 200 examples.
 
-**Annotation assistance:** I used Claude to help label batches of Reddit comments in real time during data collection. Claude suggested labels for each comment based on the definitions, and I reviewed and corrected every label before adding it to the CSV. All final labels represent my judgment.
+**Annotation assistance:** I plan to use Claude to pre-label batches of examples before reviewing them myself. I'll provide my label definitions alongside unlabeled posts and ask for one label per post, then review and correct every suggestion. Any AI-assisted pre-labeling will be disclosed in my AI usage section.
 
-**Failure analysis:** After fine-tuning, I plan to paste the wrong predictions into Claude and ask it to identify patterns — common themes among misclassified examples such as post length, use of sarcasm, or specific label pairs that keep being confused.
+**Failure analysis:** After fine-tuning, I plan to paste my wrong predictions into Claude and ask it to identify common patterns across misclassified examples — things like post length, sarcasm, or specific label pairs. I will verify any patterns myself by re-reading the examples before writing them up.
 
 ---
 
